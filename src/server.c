@@ -35,7 +35,6 @@ int init_server_socket(int port) {
             continue;
         }
 
-        // Evita "Address already in use" al reiniciar el servidor rápidamente
         int optval = 1;
         setsockopt(socketfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
 

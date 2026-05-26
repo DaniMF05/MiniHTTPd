@@ -10,7 +10,7 @@
 // Inicializa el socket del servidor en el puerto indicado
 int init_server_socket(int port);
 
-// Configura un descriptor de archivo (socket) como no-bloqueante
+// Configura el socket como no-bloqueante
 int make_socket_non_blocking(int sfd);
 
 #endif // SERVER_H

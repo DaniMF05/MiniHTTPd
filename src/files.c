@@ -32,13 +32,12 @@ bool is_safe_path(const char *uri, char *resolved_path) {
         return true; // Es totalmente seguro acceder
     }
 
-    // Si llegó aquí, intentaron salirse de la carpeta raíz
     printf("Intento de Directory Traversal bloqueado: %s\n", resolved_path);
     return false;
 }
 
 char* read_file_content(const char *absolute_path, size_t *file_size) {
-    // Abrimos en modo binario ("rb") para que pueda leer tanto HTML como imágenes (PNG/JPG)
+    // Abrimos en modo binario
     FILE *file = fopen(absolute_path, "rb");
     if (!file) {
         return NULL;

@@ -71,10 +71,6 @@ bool handle_client_request(int client_fd) {
         return false;
     }
     
-    // 💡 GESTIÓN DEL ERROR 500: Si el archivo existe pero falló la reserva de memoria
-    // (Simulación defensiva: si file_size > 0 pero file_content falló, o si quisiéramos validar un puntero nulo preventivo)
-    // Nota: read_file_content ya controla el malloc interno. Si falla, file_content es NULL.
-
     char header[256];
     int header_len = snprintf(header, sizeof(header),
                               "HTTP/1.1 200 OK\r\n"

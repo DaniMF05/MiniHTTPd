@@ -110,7 +110,7 @@ Este proyecto no expone flags por CLI; los parámetros principales están defini
 	 - Si el evento viene de un cliente: se procesa una petición con `handle_client_request()`.
 5. Si el handler no devuelve keep-alive, se cierra el socket del cliente.
 
-## Comportamiento HTTP (lo que realmente soporta)
+## Comportamiento HTTP
 
 ### Método
 
